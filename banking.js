@@ -36,8 +36,23 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
 
     const newWithdrawTotal = previousWithdrawValue + newWidthdrawValue;
     withdrawTotal.innerText = newWithdrawTotal;
+
+
+    // balance update
+
+    const balanceTotal = document.getElementById('balance-total');
+    const previousBalanceText = balanceTotal.innerText;
+    const previousBalanceValue = parseFloat(previousBalanceText);
+    const newBalanceTotal = previousBalanceValue - newWidthdrawValue;
+
+    balanceTotal.innerText = newBalanceTotal;
+
+
     withdrawInput.value = '';
 
 
 
-})
+});
+
+
+
